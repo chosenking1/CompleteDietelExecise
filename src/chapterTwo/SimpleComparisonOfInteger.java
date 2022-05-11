@@ -21,6 +21,24 @@ public class SimpleComparisonOfInteger {
     }
 
     public String getComparison() {
-        return null;
+        if(integer > 100){
+            return "The Integer is greater than 100";
+        }
+        if(integer < 100){
+            return "The Integer is lesser than 100";
+        }
+        if(integer == 100){
+            return "The Integer is equal to 100";
+        }
+        if(integerSquare > 100){
+            return "The Square of Integer is greater than 100";
+        }
+        if(integerSquare < 100){
+            return "The Square of Integer is greater than 100";
+        }
+        if(integerSquare == 100){
+            return "The Square of Integer is equal to 100";
+        }
+       return null;
     }
 }
