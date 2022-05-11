@@ -47,4 +47,16 @@ public class ArithmeticSmallestAndLargest {
         }
         return 0;
     }
+
+    public int sumOfNumbers() {
+        return firstNumber + secondNumber + thirdNumber;
+    }
+
+    public int productOfNumbers() {
+        return firstNumber * secondNumber * thirdNumber;
+    }
+
+    public int averageOfNumbers() {
+        return (firstNumber + secondNumber + thirdNumber) / 3;
+    }
 }

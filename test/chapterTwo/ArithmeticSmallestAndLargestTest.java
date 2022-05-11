@@ -30,4 +30,22 @@ public class ArithmeticSmallestAndLargestTest {
     void theLargestNumberCanBeGotten(){
         assertEquals(30, arithmeticSmallestAndLargest.largestNumber());
     }
+
+    @Test
+
+    void theSumCanBeGotten(){
+        assertEquals(60, arithmeticSmallestAndLargest.sumOfNumbers());
+    }
+
+    @Test
+
+    void theProductCanBeGotten(){
+        assertEquals(6000, arithmeticSmallestAndLargest.productOfNumbers());
+    }
+
+    @Test
+
+    void theAverageCanBeGotten(){
+        assertEquals(20, arithmeticSmallestAndLargest.averageOfNumbers());
+    }
 }
