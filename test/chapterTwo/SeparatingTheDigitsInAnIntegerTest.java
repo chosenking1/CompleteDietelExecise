@@ -1,4 +1,10 @@
 package chapterTwo;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 //2.30
 //        Write an application that inputs one number consisting of five digits from the user,
 //        separates the number into its individual digits and prints the digits
@@ -9,5 +15,11 @@ package chapterTwo;
 //        digits? [Hint: It’s possible to do this exercise with the techniques you learned in this chapter. You’ll
 //        need to use both division and remainder operations to “pick off ” each digit.]
 public class SeparatingTheDigitsInAnIntegerTest {
+    @Test
+    void areaCanBeCalculated(){
+
+        String result = SeparatingTheDigitsInAnInteger.seperator(23456);
+        assertEquals("2   3   4   5   6",result);
+    }
 
 }
