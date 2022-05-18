@@ -7,6 +7,16 @@ public class PetrolPurchase {
     private double pricePerLitre;
     private double percentageDiscount;
 
+    public PetrolPurchase(String stationLocation, String typeOfPetrol, int quantity, double pricePerLitre, double percentageDiscount) {
+        this.stationLocation = stationLocation;
+        this.typeOfPetrol = typeOfPetrol;
+        this.quantity = quantity;
+        this.pricePerLitre = pricePerLitre;
+        this.percentageDiscount = percentageDiscount / 100;
+    }
+
+
+
     public void setStationLocation(String location){
         stationLocation = location;
     }
@@ -43,7 +53,8 @@ public class PetrolPurchase {
     }
 
     public double getPurchaseAmount(int quantity,double price, int discount){
-        double netPurchase = (quantity * price) - discount;
+        double realDiscount =   (discount / 100.0) * (quantity * price);
+        double netPurchase = (quantity * price) - realDiscount;
 
         return  netPurchase;
     }

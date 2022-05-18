@@ -1,4 +1,10 @@
 package chapterThree;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 // 3.12
 // (Class PetrolPurchase) Create a class called PetrolPurchase to represent information about the petrol you purchase.
 //        The class should include five pieces of information in the form of
@@ -12,5 +18,15 @@ package chapterThree;
 //        then returns the net amount you had to pay as a double value.
 //        Write an application class named Petrol that demonstrates the capabilities of class PetrolPurchase.
 public class PetrolPurchaseTest {
+        PetrolPurchase petrolPurchase;
 
+        @BeforeEach
+    void setUp(){
+            petrolPurchase = new PetrolPurchase("Lagos","Standard Unleaded",10,160,10);
+        }
+
+        @Test
+    void purchaseAmountCanBeGotten(){
+            assertEquals(1040,  petrolPurchase.getPurchaseAmount(10,130,20));
+        }
 }
